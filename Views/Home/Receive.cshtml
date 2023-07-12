@@ -62,6 +62,7 @@
     function start() {
         connection.start().then(function () {
             console.log("SignalR链接成功");
+            document.getElementById("userInput").value = connection.connectionId;
         }).catch((err) => {
             console.error(err.toString());
         });
@@ -90,6 +91,5 @@
                 console.log(res)
             }
         });
-
     })
 </script>
