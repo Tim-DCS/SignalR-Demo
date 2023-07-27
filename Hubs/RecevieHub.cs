@@ -32,7 +32,7 @@ public class RecevieHub : Hub
         return base.OnConnectedAsync();
     }
 
-    public override Task OnDisconnectedAsync(Exception? exception)
+    public override Task OnDisconnectedAsync(Exception exception)
     {
         string persistentConnectionId = Context.GetHttpContext().Request.Query["connectionId"];
         var chatUserDto = new ChatUserDto();
